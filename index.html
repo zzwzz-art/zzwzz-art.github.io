@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz sulle Fiabe</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Quiz sulle Fiabe</title>
+<style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
@@ -179,140 +180,187 @@
     </style>
 </head>
 <body>
-    <div class="quiz-container">
-        <h1><a href="https://app.napkin.ai/page/CgoiCHByb2Qtb25lEiwKBFBhZ2UaJDY1YmQ5ZjViLTA4OGItNGRmYi1hM2M1LTdiNDA1Y2RiZDk2Mg?s=1" target="_blank">Quiz sulle Fiabe</a></h1>
-        <div id="quiz"></div>
-        <button class="submit-btn" onclick="submitQuiz()">Verifica Risposte</button>
-    </div>
-    <!-- Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="modal-text"></p>
-        </div>
-    </div>
-
-    <script>
+<div class="quiz-container">
+<h1><a href="https://app.napkin.ai/page/CgoiCHByb2Qtb25lEiwKBFBhZ2UaJGRmZWU0ZTZiLWRmYmQtNGFkZS1iNmMxLTU2NjdhNGUwNWMxMw?s=1" target="_blank">Quiz Canto 34 – Orlando Furioso</a></h1>
+<div id="quiz"></div>
+<button class="submit-btn" onclick="submitQuiz()">Verifica Risposte</button>
+</div>
+<!-- Modal -->
+<div class="modal" id="myModal">
+<div class="modal-content">
+<span class="close">×</span>
+<p id="modal-text"></p>
+</div>
+</div>
+<script>
         const questions = [
     {
-        "question": "Qual è la struttura narrativa del Decameron?",
+        "question": "Chi è Astolfo nel poema *Orlando Furioso*?",
         "answers": [
-            "Una poesia in rima",
-            "Un dialogo filosofico",
-            "Una cornice con cento novelle",
-            "Un trattato sulla peste"
-        ],
-        "correct": 2,
-        "explanation": "NB. \"Il Decameron è strutturato in una cornice narrativa che racchiude cento novelle raccontate da dieci giovani in dieci giorni.\"",
-        "text": "Il Decameron è ambientato durante la peste del 1348 a Firenze. Dieci giovani (sette donne e tre uomini) si rifugiano in campagna e decidono di raccontare ogni giorno una novella ciascuno per dieci giorni. Da qui nasce una raccolta di cento novelle, da cui il titolo (dal greco 'deka' e 'hemera': dieci giorni)."
-    },
-    {
-        "question": "Chi è l'autore del Decameron?",
-        "answers": [
-            "Dante Alighieri",
-            "Giovanni Boccaccio",
-            "Francesco Petrarca",
-            "Niccolò Machiavelli"
+            "Un saraceno convertito",
+            "Un paladino di Carlo Magno, cugino di Orlando",
+            "Un mago della corte di Almonte",
+            "Un re greco in esilio"
         ],
         "correct": 1,
-        "explanation": "NB. \"Giovanni Boccaccio è l'autore del Decameron, una delle opere più importanti della letteratura italiana trecentesca.\"",
-        "text": "Giovanni Boccaccio (1313-1375) fu uno scrittore, poeta e umanista fiorentino. Il Decameron rappresenta la sua opera maggiore, considerata un capolavoro della prosa italiana medievale. Boccaccio unisce realismo e ironia, riflettendo sulla natura umana con profondità e leggerezza."
+        "explanation": "Astolfo è un paladino di Carlo Magno e cugino di Orlando. È noto per il suo spirito avventuroso e il suo viaggio sulla Luna.",
+        "text": "Nel poema di Ariosto, Astolfo è uno dei cavalieri cristiani più eccentrici, spesso protagonista di imprese straordinarie e fantastiche."
     },
     {
-        "question": "In quale contesto storico si svolge il Decameron?",
+        "question": "Chi è San Giovanni Evangelista nel Canto XXXIV?",
         "answers": [
-            "Durante le Crociate",
-            "Durante la peste del 1348",
-            "Durante l'esilio di Dante",
-            "Durante la guerra dei Cent'anni"
+            "Un cavaliere della Tavola Rotonda",
+            "Un vescovo di Parigi",
+            "L'autore del Vangelo secondo Giovanni che guida Astolfo sulla Luna",
+            "Un angelo inviato da Dio"
+        ],
+        "correct": 2,
+        "explanation": "San Giovanni Evangelista è l’autore del quarto Vangelo e nel poema ha il compito di guidare Astolfo nel viaggio celeste.",
+        "text": "Ariosto inserisce San Giovanni come figura guida che unisce il sapere divino e la razionalità necessaria per ritrovare il senno perduto."
+    },
+    {
+        "question": "Chi accompagna Astolfo nel viaggio verso la Luna?",
+        "answers": [
+            "San Pietro",
+            "San Giovanni Evangelista",
+            "Ludovico Ariosto",
+            "Orlando"
         ],
         "correct": 1,
-        "explanation": "NB. \"Il Decameron si svolge durante l'epidemia di peste che colpì Firenze nel 1348.\"",
-        "text": "La peste del 1348 fu una delle più gravi pandemie della storia europea. Nel Decameron, essa è lo sfondo che induce i dieci giovani a lasciare la città e a rifugiarsi in campagna. La peste assume un ruolo simbolico, marcando un passaggio tra il caos e la possibilità di una nuova socialità fondata sul racconto e sullo svago intelligente."
+        "explanation": "San Giovanni Evangelista guida Astolfo nel viaggio verso la Luna.",
+        "text": "Nel Canto XXXIV, Astolfo è guidato da San Giovanni Evangelista nel suo viaggio celeste per recuperare il senno di Orlando."
     },
     {
-        "question": "Quanti racconti contiene il Decameron?",
+        "question": "Per quale motivo Astolfo sale sulla Luna?",
         "answers": [
-            "50 novelle",
-            "70 novelle",
-            "100 novelle",
-            "120 novelle"
-        ],
-        "correct": 2,
-        "explanation": "NB. \"Il Decameron contiene cento novelle raccontate in dieci giorni da dieci giovani.\"",
-        "text": "Ogni giorno, uno dei giovani assume il ruolo di re o regina della giornata e sceglie il tema a cui dovranno ispirarsi le novelle. Le cento storie toccano una vasta gamma di temi, dai più comici ai più drammatici, dai più amorosi ai più morali."
-    },
-    {
-        "question": "Quale tra questi è un tema centrale del Decameron?",
-        "answers": [
-            "La redenzione religiosa",
-            "La celebrazione della nobiltà",
-            "L'ingegno umano",
-            "La predestinazione"
-        ],
-        "correct": 2,
-        "explanation": "NB. \"Uno dei temi centrali del Decameron è l'ingegno umano, spesso capace di risolvere situazioni difficili con astuzia.\"",
-        "text": "Nel Decameron, l'ingegno è spesso premiato. I personaggi più intelligenti, astuti e capaci di adattarsi alla realtà riescono a ottenere ciò che desiderano. Boccaccio valorizza la prontezza mentale, la furbizia e l'inventiva, indipendentemente dalla classe sociale."
-    },
-    {
-        "question": "Quale famosa novella racconta il sacrificio di una madre per amore?",
-        "answers": [
-            "Griselda",
-            "Chichibìo",
-            "Andreuccio da Perugia",
-            "Alatiel"
-        ],
-        "correct": 0,
-        "explanation": "NB. \"La novella di Griselda è un esempio di pazienza e sacrificio femminile, messo alla prova dal marito Gualtieri.\"",
-        "text": "L'ultima novella del Decameron narra la storia di Griselda, una donna umile sottoposta a dure prove dal marito per testarne la fedeltà e la pazienza. La novella pone interrogativi sul ruolo della donna, sull'obbedienza e sulla crudeltà travestita da virtù."
-    },
-    {
-        "question": "Quale narratore dirige il primo giorno del Decameron?",
-        "answers": [
-            "Pampinea",
-            "Filostrato",
-            "Dioneo",
-            "Elissa"
-        ],
-        "correct": 0,
-        "explanation": "NB. \"Pampinea è la prima a proporre di lasciare Firenze e diventa la regina del primo giorno.\"",
-        "text": "Pampinea, tra le sette fanciulle, è la più matura e prende l'iniziativa di lasciare Firenze per sfuggire alla peste. Nel primo giorno del Decameron, non viene imposto un tema, e i narratori possono raccontare qualsiasi storia desiderino."
-    },
-    {
-        "question": "Qual è lo stile linguistico usato da Boccaccio nel Decameron?",
-        "answers": [
-            "Volgare fiorentino elegante",
-            "Latino ecclesiastico",
-            "Volgare siciliano",
-            "Lingua provenzale"
-        ],
-        "correct": 0,
-        "explanation": "NB. \"Boccaccio usa un volgare fiorentino elegante e ricco, anticipando l’italiano letterario moderno.\"",
-        "text": "Il Decameron è scritto in un volgare fiorentino alto, chiaro e narrativamente efficace. Boccaccio unisce il registro colto e quello popolare, creando una prosa fluida e variegata, considerata un modello per la prosa italiana rinascimentale."
-    },
-    {
-        "question": "Come viene rappresentata la Chiesa nel Decameron?",
-        "answers": [
-            "Sempre in modo rispettoso",
-            "Come guida morale",
-            "Spesso con ironia e critica",
-            "Come unica salvezza"
-        ],
-        "correct": 2,
-        "explanation": "NB. \"Nel Decameron, la Chiesa è spesso oggetto di critica per la corruzione e l’ipocrisia di alcuni suoi membri.\"",
-        "text": "Molte novelle del Decameron mettono in ridicolo frati, monaci e religiosi corrotti o ipocriti. Questo non implica un attacco alla religione, ma piuttosto alla falsità di chi se ne serve per fini personali. L’ironia di Boccaccio è sottile e acuta."
-    },
-    {
-        "question": "Che ruolo ha il racconto nel Decameron?",
-        "answers": [
-            "È un rito magico",
-            "È una cura contro la morte",
-            "È un obbligo morale",
-            "È uno strumento per l'insegnamento scolastico"
+            "Per scoprire il futuro",
+            "Per ritrovare il senno di Orlando",
+            "Per salvare Angelica",
+            "Per chiedere consiglio agli dèi"
         ],
         "correct": 1,
-        "explanation": "NB. \"Nel Decameron, il racconto è una forma di evasione dalla realtà della peste e un mezzo per riscoprire la vita.\"",
-        "text": "Il racconto nel Decameron è centrale: serve a tenere viva la mente, a creare legami sociali, a trasmettere conoscenze ed esperienze. In un tempo di morte e disperazione, narrare storie diventa un gesto vitale, creativo, quasi terapeutico."
+        "explanation": "Astolfo sale sulla Luna per ritrovare il senno di Orlando, perduto per amore.",
+        "text": "La Luna è simbolicamente il luogo dove si raccolgono tutte le cose perse sulla Terra, incluso il senno di Orlando."
+    },
+    {
+        "question": "Cosa rappresenta simbolicamente la Luna nel Canto XXXIV?",
+        "answers": [
+            "Il paradiso perduto",
+            "Il luogo dell’amore eterno",
+            "Il regno dei morti",
+            "Il luogo dove si trovano le cose perdute della Terra"
+        ],
+        "correct": 3,
+        "explanation": "La Luna rappresenta il luogo dove finiscono tutte le cose perdute sulla Terra.",
+        "text": "Ariosto utilizza la Luna come metafora per riflettere sulla vanità e la follia umana."
+    },
+    {
+        "question": "Con quale mezzo Astolfo raggiunge la Luna?",
+        "answers": [
+            "Su una nave incantata",
+            "Su un ippogrifo",
+            "Su un carro trainato da cavalli infuocati",
+            "Volando con ali meccaniche"
+        ],
+        "correct": 2,
+        "explanation": "Astolfo viaggia su un carro di fuoco, simile a quello del profeta Elia.",
+        "text": "Il mezzo usato per arrivare alla Luna accentua il tono mitico e biblico del canto."
+    },
+    {
+        "question": "Dove viene ritrovato il senno di Orlando?",
+        "answers": [
+            "In un’anfora di cristallo",
+            "In un sacchetto di sabbia",
+            "Nella fonte dell’oblio",
+            "In una stella"
+        ],
+        "correct": 0,
+        "explanation": "Il senno di Orlando è custodito in un’anfora di cristallo.",
+        "text": "Il vaso trasparente rappresenta la fragilità e la preziosità della ragione umana."
+    },
+    {
+        "question": "Come viene restituito il senno a Orlando?",
+        "answers": [
+            "Con una pozione",
+            "Facendogli annusare il contenuto del vaso",
+            "Con un colpo sulla testa",
+            "Attraverso la preghiera"
+        ],
+        "correct": 1,
+        "explanation": "Il senno viene restituito a Orlando facendogli annusare il contenuto dell’anfora.",
+        "text": "Il gesto dell’annusare sottolinea il contatto diretto e quasi alchemico con la ragione perduta."
+    },
+    {
+        "question": "Quale tema emerge fortemente dal Canto XXXIV?",
+        "answers": [
+            "La guerra contro i Saraceni",
+            "Il valore dell’amicizia",
+            "La follia dell’uomo e il recupero della ragione",
+            "Il destino e la predestinazione"
+        ],
+        "correct": 2,
+        "explanation": "Il canto riflette sulla follia dell’uomo, personificata da Orlando, e sul difficile recupero della ragione.",
+        "text": "Il viaggio di Astolfo è allegorico: solo chi ha fede e intelletto può guidare altri verso il recupero del senno."
+    },
+    {
+        "question": "Chi ha perduto il senno a causa dell’amore per Angelica?",
+        "answers": [
+            "Ruggiero",
+            "Astolfo",
+            "Orlando",
+            "Agramante"
+        ],
+        "correct": 2,
+        "explanation": "Orlando perde il senno per amore di Angelica.",
+        "text": "La passione amorosa viene rappresentata come una forza destabilizzante che porta alla follia."
+    },
+    {
+        "question": "Cosa vede Astolfo sulla Luna?",
+        "answers": [
+            "Solo stelle e pianeti",
+            "Un paesaggio infernale",
+            "Un’enorme biblioteca",
+            "Oggetti e concetti perduti sulla Terra"
+        ],
+        "correct": 3,
+        "explanation": "Sulla Luna si trovano tutte le cose perdute dagli uomini sulla Terra, tra cui la fama, il tempo e il senno.",
+        "text": "Ariosto elenca con ironia e profondità concetti astratti e oggetti concreti che l’uomo spreca."
+    },
+    {
+        "question": "Cosa simboleggia il senno perduto di Orlando?",
+        "answers": [
+            "La guerra tra cristiani e musulmani",
+            "La perdita dell’identità nazionale",
+            "La fragilità della ragione umana",
+            "La vittoria dell’amore"
+        ],
+        "correct": 2,
+        "explanation": "Il senno perduto simboleggia la fragilità e la precarietà della ragione umana.",
+        "text": "Orlando diventa il simbolo dell’uomo vittima delle passioni incontrollate."
+    },
+    {
+        "question": "Chi custodisce il senno di Orlando?",
+        "answers": [
+            "Un angelo",
+            "San Giovanni",
+            "Un saggio eremita",
+            "Un demone lunare"
+        ],
+        "correct": 1,
+        "explanation": "San Giovanni custodisce e riconsegna ad Astolfo il senno di Orlando.",
+        "text": "La figura del santo rappresenta la guida spirituale e razionale necessaria per il recupero del senno."
+    },
+    {
+        "question": "Cosa indica il ritorno del senno ad Orlando?",
+        "answers": [
+            "La fine dell’amore",
+            "La morte dell’eroe",
+            "Il trionfo della religione",
+            "Il ritorno all’equilibrio e alla razionalità"
+        ],
+        "correct": 3,
+        "explanation": "Il ritorno del senno simboleggia il ripristino dell’equilibrio interiore e della razionalità.",
+        "text": "Orlando, ritrovata la ragione, torna a essere un cavaliere valoroso e saggio."
     }
 ];
 
